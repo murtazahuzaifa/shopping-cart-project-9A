@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Button, Card, CardActionArea, CardActions, CardContent, CardMedia } from '@material-ui/core';
 import AddShoppingCart from '@material-ui/icons/AddShoppingCart';
 import { ShoeType } from '../../Types/Types';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addToCart } from '../../ReduxStore/cartListSlice';
 
 const useStyles = makeStyles({

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import style from './NavBar.module.css';
 import ShoppingCart from '@material-ui/icons/ShoppingCart'
 import Badge from '@material-ui/core/Badge';
@@ -6,8 +6,8 @@ import { withStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import { RightDrawer } from '../'
 import { useDispatch, useSelector } from 'react-redux';
-import { openDrawer, isRightDrawerOpen } from '../../ReduxStore/rightDrawerSlice';
-import { addToCart, removeFromCart, cartProductList } from '../../ReduxStore/cartListSlice';
+import { openDrawer } from '../../ReduxStore/rightDrawerSlice';
+import { cartProductList } from '../../ReduxStore/cartListSlice';
 
 const StyledBadge = withStyles((theme) => ({
     badge: {
@@ -20,7 +20,6 @@ const StyledBadge = withStyles((theme) => ({
 
 export default function () {
     const dispatch = useDispatch();
-    const isopen = useSelector(isRightDrawerOpen)
     const cartList = useSelector(cartProductList)
     return (
         <div className={`${style.navBar}`}>

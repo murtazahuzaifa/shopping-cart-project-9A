@@ -1,15 +1,10 @@
 import React, {useEffect} from 'react';
-// import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-// import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
+// import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
-// import ListItemIcon from '@material-ui/core/ListItemIcon';
-import MailIcon from '@material-ui/icons/Mail';
 import DeleteForeverRounded from '@material-ui/icons/DeleteForeverRounded';
-// import InboxIcon from '@material-ui/icons/MoveToInbox';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 import { useDispatch, useSelector } from 'react-redux';
@@ -43,7 +38,7 @@ const RightDrawer: React.FC = () => {
     const totalPrice: number = cartList.map(obj => obj.price * obj.quanity ).reduce((a: number, b: number) => (a + b), 0)
 
     // if there is no product in cart and total price is 0 close the right drawer
-    useEffect(()=>{ if(totalPrice < 1){dispatch(closeDrawer())} }, [totalPrice])
+    useEffect(()=>{ if(totalPrice < 1){dispatch(closeDrawer())} }, [totalPrice, dispatch])
 
     const toggleDrawer = (open: boolean) => (event: React.KeyboardEvent) => {
         if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
