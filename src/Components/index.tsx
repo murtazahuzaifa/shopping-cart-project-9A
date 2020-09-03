@@ -3,6 +3,7 @@ import NavBar from './NavBar/NavBar';
 import Cover from './Cover/Cover';
 import ProductCard from './ProductCard/ProductCard';
 import RightDrawer from './RightDrawer/RightDrawer';
+import Footer from './Footer/Footer';
 
 export {
     App,
@@ -10,5 +11,6 @@ export {
     Cover,
     ProductCard,
     RightDrawer,
+    Footer,
 }
 

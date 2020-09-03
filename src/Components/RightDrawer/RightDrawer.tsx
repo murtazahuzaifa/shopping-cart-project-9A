@@ -60,14 +60,14 @@ const RightDrawer: React.FC = () => {
                     {cartList.map((prod, index) => (
                         <ListItem key={index}  >
                             <Avatar alt={prod.name} src={prod.imgSrc} className={classes.avatar} ></Avatar>
-                            <ListItemText primary={`${prod.name} `} secondary={`${prod.price}/- PRK`} className={classes.listItem} />
+                            <ListItemText primary={`${prod.name} `} secondary={`${prod.price}/- PKR`} className={classes.listItem} />
                             <Typography className={classes.quantity} variant='caption'>X{prod.quanity}</Typography>
                             <IconButton onClick={() => { dispatch(removeFromCart(prod.id)) }}> <DeleteForeverRounded /> </IconButton>
                         </ListItem>
                     ))}
                     <ListItem><ListItemText primary={'Total'} className={classes.totalAmount} />
                         <Typography variant='h6' color='textPrimary'>
-                            <CountUp start={0} end={totalPrice} duration={1} separator="," />/- PRK
+                            <CountUp start={0} end={totalPrice} duration={1} separator="," />/- PKR
                         </Typography>
                     </ListItem>
                 </List>

@@ -1,10 +1,9 @@
 import React from 'react';
 import style from  './App.module.css';
-import {NavBar, Cover} from '../';
+import {NavBar, Cover, Footer} from '../';
 import BestSelling from './BestSelling';
 import NewCollections from './NewCollections';
 import AllProducts from './AllProducts';
-
 
 function App() {
   return (
@@ -15,7 +14,7 @@ function App() {
       <NewCollections/>
       <BestSelling/>
       <AllProducts/>
-      hello form react
+      <Footer/>
     </div>
   );
 }
