@@ -1,0 +1,47 @@
+.cover{
+
+}
+
+.cover > svg{
+    background-image: url("https://i.pinimg.com/originals/68/6f/22/686f2228249a21398ad971c693b20d12.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.footBallImg{
+    width: 350px;
+    transform: translate(1500px, 380px);
+    animation: footBallHover ease 2s infinite ;
+}
+
+.shoeImg{
+    width: 700px;
+    transform: translate(200px, 5px) rotate(30deg);
+    animation: shoeHover ease 2s infinite;
+}
+
+.text{
+    fill:#006837;stroke:#FFFF00;stroke-miterlimit:10;
+    stroke-width:3;
+    font-family:'TrebuchetMS';
+    font-size: 200px;
+    transform: translate(22%, 60%);
+    /* opacity: 0; */
+    animation: animateText ease 3s ;
+}
+
+@keyframes footBallHover {
+    0%{ transform: translate(1500px, 200px); }
+    50%{ transform: translate(1500px, 280px); }
+    100%{ transform: translate(1500px, 200px); }
+}
+@keyframes shoeHover {
+    0%{ transform: translate(200px, 5px) rotate(30deg) ; }
+    50%{ transform: translate(150px, 100px) rotate(20deg) ;}
+    100%{ transform: translate(200px, 5px) rotate(30deg) ; }
+}
+
+@keyframes animateText {
+    0% {opacity: 0;}
+    100% { opacity: 1; }
+}
