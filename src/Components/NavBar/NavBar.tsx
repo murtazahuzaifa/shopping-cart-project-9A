@@ -24,7 +24,7 @@ export default function () {
     return (
         <div className={`${style.navBar}`}>
             <div><RightDrawer /></div>
-            <div><h1>Shopping Cart</h1></div>
+            <div><h1>Shopping Cart.</h1></div>
             <div>
                 <IconButton aria-label="cart" onClick={() => { dispatch(openDrawer()) }} disabled={!Boolean(cartList?.length)}>
                     <StyledBadge badgeContent={cartList?.length} color="secondary">
